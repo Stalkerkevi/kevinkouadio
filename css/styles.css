@@ -302,10 +302,6 @@ img
 {
 	opacity: 1;
 }
-.work .container .card .face.face1 .content-card1 img
-{
-	/*max-width: 100px;*/
-}
 .work .container .card .face.face1 .content-card1 h3
 {
 	margin: 10 0 0;
@@ -369,7 +365,7 @@ img
 	padding: 60px 40px;
 	margin: 20px;
 	background: #2196f3;
-	
+
 	
 }
 .testimonial .content .testimonialBx p 
