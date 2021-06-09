@@ -137,10 +137,10 @@ header.sticky ul li a
 {
 	color: #111;
 }
-
-
-
-
+header span
+{
+	color:#f15025;
+}
 .heading
 {
 	width: 100%;
