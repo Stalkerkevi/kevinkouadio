@@ -45,20 +45,25 @@
 
 	<p>	La Chambre d’Agriculture du Pas-de-Calais qui assurait des missions d’accompagnement pour le développement de l’agriculture dans son département, souhaitait faciliter le travail des techniciens se rendant dans les exploitations, elles souhaitait mettre à leur disposition un terminal mobile (tablette ou téléphone) sur lequel serait installé une application permettant la saisie des informations collectées ainsi que l'envoi vers un serveur de ces informations.</p>
 
-    <h2>Besoins en fonctionnalités</h2>
+    <h2>Tâches réalisés :</h2>
+		
+	<p>
+		- Analyse du cahier des charges
+		- Création du MCD
+		- Création des classes
+		- Création des layouts
+		- Création des bases de données local (SQLite) et distante (MySQL)
+		- Création d'un script PHP
+		- Test de l'appli sur un émulateur Android 
+	</p>
 
-	<p>Dans un premier, il a fallu analyser le cahier des charges et extraire les éléments importants, créer le MCD (Modèle Conceptuel de données) avec toutes les entités correspondantes, générer le script SQL et l’importer dans la base de données à l’aide de phpmyadmin.</p>
 
-	<p>Dans un second temps, il a fallu démarrer l’IDE Android Studio et créer un nouveau projet afin mettre en place les différentes classes (MainActivity, SaisieEspece, GestionnaireBase, Global, MenuApp) qui permettront pour certains de recevoir les données saisies, pour la classe Global créer un attribut qui sera une instance de la classe SQLiteDatabase, la classe MonGestionnaireBase qui permettra de répertorier toutes les tables à utiliser et les exécuter, pour ensuite créer la base de données local en SQLite.</p>
+        <h3>Langages et logiciels utilisés :</h3>
 
-        <p>>En ce qui concerne l’affichage des pages, j’ai crée une première page avec deux boutons (saisie espèce et saisie exploitations) pour permettre d’accéder aux pages suivantes, à l’aide de fichiers (Layouts) en xml et à partir de l’outil Design permettant de rapidement créer les pages sur Android studio.</p>
-
-        <p>>En ce qui concerne la récupération des données par la base, j’ai crée une méthode dans les classes de saisie permettant l’envoi des données vers un script PHP, qui utilisera la classe PDO pour donner un lien entre le script et la base de données, j’ai ensuite créer une variable contenant un INSERT INTO qui enregistrera les données dans la table concerner et je l’ai exécuté à l’aide de la méthode « exec » de la classe PDO.</p>
-
-
-        <h3>Problèmes rencontrés / Solutions trouvées</h3>
-
-<p>Les problèmes que j’ai rencontré sont que lors de l’utilisation de la table Exploitation dans la base local, j’ai voulu faire un INSERT INTO, mais elle n’était pas reconnu suite à une erreur dans son nom et un NOT NULL en trop sur une champ, mais aussi lors de la mise en place de la méthode permettant l’envoie des données vers le script, car il n’arrivait pas à communiquer avec le script PHP, pour régler le problème, j’ai du rajouter « <uses-permission android:name="android.permission.INTERNET"></uses-permission> et android:usesCleartextTraffic="true" » dans le fichier AndroidManifest.xml.</p>
+	<p>
+		- Java,PHP,SQL
+		- Android Studio, WinDesign, WAMP, Visual Studio Code  
+	 </p>
 
 <h3>Mes compétences obtenues</h3>
 
