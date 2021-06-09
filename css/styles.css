@@ -226,6 +226,11 @@ img
 	max-width: 80px;
 	filter: invert(1);
 }
+.services .content .servicesBx .img img
+{
+	max-width: 80px;
+	filter: invert(1);
+}
 .services .content .servicesBx h2
 {
 	font-size: 20px;
