@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<title>Portfolio - KOUADIO Kevin</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Portfolio</a>
+		<div class="toggle" >
+		<ul class="menu">
+			<li>
+				<a href="index.html#home">Accueil</a>
+			</li>
+			<li>
+				<a href="index.html#about">A propos</a>
+			</li>
+			<li>
+				<a href="index.html#services">Compétences</a>
+			</li>
+			<li>
+				<a href="index.html#work">Projets</a>
+			</li>
+			<li>
+				<a href="index.html#testimonial">Formation</a>
+			</li>
+			<li>
+				<a href="veille.html">Veille</a>
+			</li>
+		</ul>	
+		</div>
+	</header>
+	<section class="banner1" id="home"> 
+			<p>Portefeille de compétences</p>
+	</section>
+	<section class="about" id="about">
+		<div class="heading1">
+			<h2>Portefeuille de compétences</h2>
+		</div>
+		<div class="content">
+			<embed src=pdf/fe6.pdf width=1800 height=700 type='application/pdf'/>
+		</div>
+	</section>
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			var header = document.querySelector('header')
+			header.classList.toggle('sticky', window.scrollY > 0);
+		});
+		function toggleMenu(){
+			var menuToggle = document.querySelector('.toggle');
+			menuToggle.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

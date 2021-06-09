@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<title>Portfolio - KOUADIO Kevin</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Portfolio</a>
+		<div class="toggle" >
+		<ul class="menu">
+			<li>
+				<a href="index.html#home">Accueil</a>
+			</li>
+			<li>
+				<a href="index.html#about">A propos</a>
+			</li>
+			<li>
+				<a href="index.html#services">Compétences</a>
+			</li>
+			<li>
+				<a href="index.html#work">Projets</a>
+			</li>
+			<li>
+				<a href="index.html#testimonial">Formation</a>
+			</li>
+			<li>
+				<a href="veille.html">Veille</a>
+			</li>
+		</ul>	
+		</div>
+	</header>
+	<section class="banner1" id="home"> 
+			<p>Projet Android</p>
+	</section>
+	<section class="about" id="about">
+		<div class="heading1">
+			<h2>Projet Android</h2>
+		</div>
+		<div class="content1">
+	<h3>Contexte</h3> 
+
+	<p>	La Chambre d’Agriculture du Pas-de-Calais qui assurait des missions d’accompagnement pour le développement de l’agriculture dans son département, souhaitait faciliter le travail des techniciens se rendant dans les exploitations, elles souhaitait mettre à leur disposition un terminal mobile (tablette ou téléphone) sur lequel serait installé une application permettant la saisie des informations collectées ainsi que l'envoi vers un serveur de ces informations.</p>
+
+    <h2>Besoins en fonctionnalités</h2>
+
+	<p>Dans un premier, il a fallu analyser le cahier des charges et extraire les éléments importants, créer le MCD (Modèle Conceptuel de données) avec toutes les entités correspondantes, générer le script SQL et l’importer dans la base de données à l’aide de phpmyadmin.</p>
+
+	<p>Dans un second temps, il a fallu démarrer l’IDE Android Studio et créer un nouveau projet afin mettre en place les différentes classes (MainActivity, SaisieEspece, GestionnaireBase, Global, MenuApp) qui permettront pour certains de recevoir les données saisies, pour la classe Global créer un attribut qui sera une instance de la classe SQLiteDatabase, la classe MonGestionnaireBase qui permettra de répertorier toutes les tables à utiliser et les exécuter, pour ensuite créer la base de données local en SQLite.</p>
+
+        <p>>En ce qui concerne l’affichage des pages, j’ai crée une première page avec deux boutons (saisie espèce et saisie exploitations) pour permettre d’accéder aux pages suivantes, à l’aide de fichiers (Layouts) en xml et à partir de l’outil Design permettant de rapidement créer les pages sur Android studio.</p>
+
+        <p>>En ce qui concerne la récupération des données par la base, j’ai crée une méthode dans les classes de saisie permettant l’envoi des données vers un script PHP, qui utilisera la classe PDO pour donner un lien entre le script et la base de données, j’ai ensuite créer une variable contenant un INSERT INTO qui enregistrera les données dans la table concerner et je l’ai exécuté à l’aide de la méthode « exec » de la classe PDO.</p>
+
+
+        <h3>Problèmes rencontrés / Solutions trouvées</h3>
+
+<p>Les problèmes que j’ai rencontré sont que lors de l’utilisation de la table Exploitation dans la base local, j’ai voulu faire un INSERT INTO, mais elle n’était pas reconnu suite à une erreur dans son nom et un NOT NULL en trop sur une champ, mais aussi lors de la mise en place de la méthode permettant l’envoie des données vers le script, car il n’arrivait pas à communiquer avec le script PHP, pour régler le problème, j’ai du rajouter « <uses-permission android:name="android.permission.INTERNET"></uses-permission> et android:usesCleartextTraffic="true" » dans le fichier AndroidManifest.xml.</p>
+
+<h3>Mes compétences obtenues</h3>
+
+<p>A1.1.1,Analyse du cahier des charges d'un service à produire<br>
+A1.1.3, Étude des exigences liées à la qualité attendue d'un service<br>
+A1.3.1,Test d'intégration et d'acceptation d'un service <br>
+A1.4.1,Participation à un projet <br>
+A2.1.2,Évaluation et maintien de la qualité d'un service <br>
+A2.3.1,Identification, qualification et évaluation d'un problème <br>
+A3.2.1,Installation et configuration d'éléments d'infrastructure <br>
+A4.1.1,Proposition d'une solution applicative <br>
+A5.2.2,Veille technologique<br>
+A5.2.4,Étude d ̃une technologie,d'un composant,d'un outil ou d'une méthode<br>
+A5.1.5,Évaluation d'un élément de configuration ou d'une configuration<br>
+A5.1.3,Suivi d'une configuration et de ses éléments<br>
+A4.2.2,Adaptation d'une solution applicative aux évolutions de ses composants<br>
+A4.2.3,Réalisation des tests nécessaires à la mise en production<br> d'éléments mis à jour
+A4.1.3,Conception ou adaptation d'une base de données<br>
+A4.1.4, Définition des caractéristiques d'une solution applicative<br>
+A4.1.5,Prototypage de composants logiciels <br>
+A4.1.6,Gestion d'environnements de développement et de test <br>
+A4.1.7,Développement,utilisation ou adaptation de composants logiciels <br>
+A4.1.9,Rédaction d'une documentation technique<br>
+A4.1.10,Rédaction d'une documentation d'utilisation <br>
+A4.2.1,Analyse et correction d'un dysfonctionnement,d'un problème de qualité de... <br>
+</p>
+		</div>
+	</section>
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			var header = document.querySelector('header')
+			header.classList.toggle('sticky', window.scrollY > 0);
+		});
+		function toggleMenu(){
+			var menuToggle = document.querySelector('.toggle');
+			menuToggle.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>
